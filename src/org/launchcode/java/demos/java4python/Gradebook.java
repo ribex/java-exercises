@@ -30,7 +30,7 @@ public class Gradebook {
         // Get student grades
         for (String student : students) {
             System.out.print("Grade for " + student + ": ");
-            Double grade = in.nextDouble();
+            double grade = in.nextDouble();
             grades.add(grade);
         }
 

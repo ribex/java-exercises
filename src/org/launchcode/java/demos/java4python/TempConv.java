@@ -9,9 +9,7 @@ public class TempConv {
     public static void main(String[] args) {
         double fahrenheit;
         double celsius;
-        Scanner in;
-
-        in = new Scanner(System.in);
+        Scanner in = new Scanner(System.in);
         System.out.println();
         fahrenheit = in.nextDouble();
 

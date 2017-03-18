@@ -25,7 +25,7 @@ public class GradebookHashMap {
 
             if (!newStudent.equals("")) {
                 System.out.print("Grade: ");
-                Double newGrade = in.nextDouble();
+                double newGrade = in.nextDouble();
                 students.put(newStudent, newGrade);
 
                 // Read in the newline before looping back
