@@ -6,10 +6,27 @@ package org.launchcode.java.exercises.class5.school;
 public class Student {
 
     // declare (and initialize) fields
+    private static int nextStudentId = 1;
     private String name;
-    protected int studentId;
-    private int numberOfCredits = 0;
-    private double gpa = 0.0;
+    private final int studentId;
+    private int numberOfCredits;
+    private double gpa;
+
+    private Student(String name, int studentId, int numberOfCredits, double gpa) {
+        this.name = name;
+        this.studentId = studentId;
+        this.numberOfCredits = numberOfCredits;
+        this.gpa = gpa;
+    }
+
+    private Student(String name, int studentId) {
+        this(name, studentId, 0, 0);
+    }
+
+    public Student(String name) {
+        this(name, nextStudentId);
+        nextStudentId++;
+    }
 
     public String getName() {
         return name;
@@ -21,10 +38,6 @@ public class Student {
 
     public int getStudentId() {
         return studentId;
-    }
-
-    protected void setStudentId(int studentId) {
-        this.studentId = studentId;
     }
 
     public int getNumberOfCredits() {
