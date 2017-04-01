@@ -11,8 +11,8 @@ public class Circle extends Shape{
     private double area = (radius * radius * 3.141529);
 
 
-    private Circle(double radius, double area, String borderColor, String fillColor) {
-        super(area, borderColor, fillColor);
+    private Circle(int id, double radius, double area, String borderColor, String fillColor) {
+        super(id, area, borderColor, fillColor);
         this.radius = radius;
     }
 

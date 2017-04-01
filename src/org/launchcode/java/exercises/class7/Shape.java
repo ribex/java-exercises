@@ -3,22 +3,34 @@ package org.launchcode.java.exercises.class7;
 /**
  * Created by Rebecca on 4/1/2017.
  */
-public class Shape {
+public class Shape extends AbstractEntity{
+    private int id;
     private double area;
     private String borderColor;
     private String fillColor;
 
-    protected Shape(double area, String borderColor, String fillColor) {
+
+    protected Shape(int id, double area, String borderColor, String fillColor) {
+        this.id = id;
         this.area = area;
         this.borderColor = borderColor;
         this.fillColor = fillColor;
+
     }
 
-    protected Shape(double area) {
-        this(area, "black", "black");
+    protected Shape(int id, double area) {
+        this(id, area, "black", "black");
     }
 
     protected Shape() {};
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public double getArea() {
         return area;
