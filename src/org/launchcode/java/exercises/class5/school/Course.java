@@ -15,6 +15,15 @@ public class Course {
     private int maxClassSize;
     private ArrayList<Student> roster = new ArrayList<Student>();
 
+
+    public boolean equals(Object o) {
+        return ((Course) o).getCourseId() == getCourseId();
+    }
+
+    public String toString() {
+        return courseName + " (Instructor: " + instructor + ", Course Number: " + courseId + ")";
+    }
+
     public String getInstructor() {
         return instructor;
     }

@@ -38,11 +38,11 @@ public class Student {
     public String getGradeLevel() {
         // Determine the grade level of the student based on numberOfCredits
         String gradeLevel;
-        if (numberOfCredits > 90) {
+        if (numberOfCredits >= 90) {
             gradeLevel = "Senior";
-        } else if (numberOfCredits > 60) {
+        } else if (numberOfCredits >= 60) {
             gradeLevel = "Junior";
-        } else if (numberOfCredits > 30) {
+        } else if (numberOfCredits >= 30) {
             gradeLevel = "Sophomore";
         } else {
             gradeLevel = "Freshman";
@@ -50,8 +50,13 @@ public class Student {
         return gradeLevel;
     }
 
+    public boolean equals(Object o) {
+        return ((Student) o).getStudentId() == getStudentId();
+    }
 
-
+    public String toString() {
+        return name + " (Credits: " + numberOfCredits + ", GPA: " + gpa + ")";
+    }
 
     public String getName() {
         return name;
