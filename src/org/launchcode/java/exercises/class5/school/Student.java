@@ -28,6 +28,31 @@ public class Student {
         nextStudentId++;
     }
 
+    public void addGrade(int courseCredits, double grade) {
+        // Update the appropriate fields: numberOfCredits, gpa
+        int oldCredits = numberOfCredits;
+        numberOfCredits += courseCredits;
+        gpa = ((oldCredits * gpa) + grade) / numberOfCredits;
+    }
+
+    public String getGradeLevel() {
+        // Determine the grade level of the student based on numberOfCredits
+        String gradeLevel;
+        if (numberOfCredits > 90) {
+            gradeLevel = "Senior";
+        } else if (numberOfCredits > 60) {
+            gradeLevel = "Junior";
+        } else if (numberOfCredits > 30) {
+            gradeLevel = "Sophomore";
+        } else {
+            gradeLevel = "Freshman";
+        }
+        return gradeLevel;
+    }
+
+
+
+
     public String getName() {
         return name;
     }
